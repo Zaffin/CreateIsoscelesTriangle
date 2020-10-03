@@ -61,6 +61,15 @@ namespace CreateIsoscelesTriangle.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Origin.
+        /// </summary>
+        public static string SelectOriginLabel {
+            get {
+                return ResourceManager.GetString("SelectOriginLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create Isosceles Triangle.
         /// </summary>
         public static string Title {

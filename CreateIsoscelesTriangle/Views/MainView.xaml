@@ -119,7 +119,7 @@
                     Background="Gainsboro"
                     Margin="5,2.5">
 
-            <TextBlock Text="Select Origin"
+            <TextBlock Text="{x:Static resources:UIStrings.SelectOriginLabel}"
                        Margin="10,5,10,5"/>
             
             <Button Height="25"
