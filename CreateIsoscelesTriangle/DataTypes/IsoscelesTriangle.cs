@@ -24,8 +24,8 @@ namespace CreateIsoscelesTriangle.DataTypes
         {
             Origin = origin;
             BasePosition = basePosition;
-            Width = Math.Abs(width);
-            Height = Math.Abs(height);
+            Width = width;
+            Height = height;
         }
 
         public bool Draw()

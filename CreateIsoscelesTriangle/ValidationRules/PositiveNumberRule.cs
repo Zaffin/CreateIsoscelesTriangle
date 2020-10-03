@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
+using CreateIsoscelesTriangle.Resources;
+
 namespace CreateIsoscelesTriangle.ValidationRules
 {
     public class PositiveNumberRule : ValidationRule
@@ -22,12 +24,12 @@ namespace CreateIsoscelesTriangle.ValidationRules
                 }
                 else
                 {
-                    return new ValidationResult(false, "Number must be pos");
+                    return new ValidationResult(false, UIStrings.PositiveNumberRuleLabel);
                 }
             }
             else
             {
-                return new ValidationResult(false, string.Empty);
+                return new ValidationResult(false, UIStrings.PositiveNumberRuleLabel);
             }
         }
     }

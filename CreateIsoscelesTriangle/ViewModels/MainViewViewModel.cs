@@ -11,6 +11,7 @@ using Mastercam.Math;
 using CreateIsoscelesTriangle.Commands;
 using CreateIsoscelesTriangle.Services;
 using CreateIsoscelesTriangle.DataTypes;
+using CreateIsoscelesTriangle.Resources;
 
 namespace CreateIsoscelesTriangle.ViewModels
 {
@@ -80,7 +81,7 @@ namespace CreateIsoscelesTriangle.ViewModels
 
             view?.Hide();
 
-            SelectedPoint = triangleService.SelectPoint("Select origin");
+            SelectedPoint = triangleService.SelectPoint(UIStrings.SelectOriginPrompt);
 
             view?.Show();
 

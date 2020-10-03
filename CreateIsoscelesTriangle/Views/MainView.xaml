@@ -14,6 +14,20 @@
         MinHeight="600"
         MinWidth="400"
         WindowStyle="None">
+
+    <Window.Resources>
+        <ControlTemplate x:Key="errorTemplate">
+            <Border BorderBrush="OrangeRed" BorderThickness="2">
+                <Grid>
+                    <AdornedElementPlaceholder/>
+                    <TextBlock Text="{Binding [0].ErrorContent}" Foreground="OrangeRed"
+                               VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="0,0,4,0"/>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="31"/>
@@ -27,7 +41,7 @@
 
         <Label x:Name="TitleLabel"
                Grid.Row="0"
-               Content="{x:Static resources:UIStrings.Title}"
+               Content="{x:Static resources:UIStrings.TitleLabel}"
                FontSize="16"
                Foreground="#0d64d2"
                MouseDown="TitleLabel_MouseDown"/>
@@ -142,10 +156,10 @@
                     Background="Gainsboro"
                     Margin="5,2.5">
 
-            <TextBlock Text="Triangle Settings"
+            <TextBlock Text="{x:Static resources:UIStrings.SettingsLabel}"
                        Margin="10,5,10,5"/>
 
-            <TextBlock Text="Base position:"
+            <TextBlock Text="{x:Static resources:UIStrings.BasePositionLabel}"
                        Margin="10,0"/>
 
             <Grid Height="250"
@@ -213,12 +227,13 @@
                 <TextBlock Grid.Row="0"
                            Grid.Column="0"
                            Margin="10,0"
-                           Text="Width:"
+                           Text="{x:Static resources:UIStrings.WidthLabel}"
                            VerticalAlignment="Center"/>
                 <TextBox Grid.Row="0"
                          Grid.Column="1"
                          Margin="10,2.5"
-                         VerticalContentAlignment="Center">
+                         VerticalContentAlignment="Center"
+                         Validation.ErrorTemplate="{StaticResource errorTemplate}">
                     <TextBox.Text>
                         <Binding Path="Width"
                                  UpdateSourceTrigger="PropertyChanged">
@@ -232,12 +247,13 @@
                 <TextBlock Grid.Row="1"
                            Grid.Column="0"
                            Margin="10,0"
-                           Text="Height:"
+                           Text="{x:Static resources:UIStrings.HeightLabel}"
                            VerticalAlignment="Center"/>
                 <TextBox Grid.Row="1"
                          Grid.Column="1"
                          Margin="10,2.5,10,5"
-                         VerticalContentAlignment="Center">
+                         VerticalContentAlignment="Center"
+                         Validation.ErrorTemplate="{StaticResource errorTemplate}">
                     <TextBox.Text>
                         <Binding Path="Height"
                                  UpdateSourceTrigger="PropertyChanged">

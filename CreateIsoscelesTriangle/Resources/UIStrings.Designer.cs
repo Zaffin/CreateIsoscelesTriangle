@@ -61,6 +61,33 @@ namespace CreateIsoscelesTriangle.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Base position:.
+        /// </summary>
+        public static string BasePositionLabel {
+            get {
+                return ResourceManager.GetString("BasePositionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height:.
+        /// </summary>
+        public static string HeightLabel {
+            get {
+                return ResourceManager.GetString("HeightLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter a positive value.
+        /// </summary>
+        public static string PositiveNumberRuleLabel {
+            get {
+                return ResourceManager.GetString("PositiveNumberRuleLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Origin.
         /// </summary>
         public static string SelectOriginLabel {
@@ -70,11 +97,38 @@ namespace CreateIsoscelesTriangle.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select origin.
+        /// </summary>
+        public static string SelectOriginPrompt {
+            get {
+                return ResourceManager.GetString("SelectOriginPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string SettingsLabel {
+            get {
+                return ResourceManager.GetString("SettingsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create Isosceles Triangle.
         /// </summary>
-        public static string Title {
+        public static string TitleLabel {
             get {
-                return ResourceManager.GetString("Title", resourceCulture);
+                return ResourceManager.GetString("TitleLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Width:.
+        /// </summary>
+        public static string WidthLabel {
+            get {
+                return ResourceManager.GetString("WidthLabel", resourceCulture);
             }
         }
     }
