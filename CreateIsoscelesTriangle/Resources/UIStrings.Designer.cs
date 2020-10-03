@@ -70,6 +70,26 @@ namespace CreateIsoscelesTriangle.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap CreateIsoscelesTriangle16 {
+            get {
+                object obj = ResourceManager.GetObject("CreateIsoscelesTriangle16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap CreateIsoscelesTriangle32 {
+            get {
+                object obj = ResourceManager.GetObject("CreateIsoscelesTriangle32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Height:.
         /// </summary>
         public static string HeightLabel {
@@ -84,6 +104,16 @@ namespace CreateIsoscelesTriangle.Resources {
         public static string PositiveNumberRuleLabel {
             get {
                 return ResourceManager.GetString("PositiveNumberRuleLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create an isosceles Triangle
+        ///Isosceles triangle.
+        /// </summary>
+        public static string RibbonToolTip {
+            get {
+                return ResourceManager.GetString("RibbonToolTip", resourceCulture);
             }
         }
         

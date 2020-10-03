@@ -1,0 +1,12 @@
+﻿APPLICATION "__CreateIsoscelesTriangle__"
+
+FUNC_DLL   "CHOOKS\CreateIsoscelesTriangle.dll"
+RES_DLL    "SAME"
+dnRES_NAME "CreateIsoscelesTriangle.Resources.UIStrings"
+CATEGORY   "Add-ins"
+
+FUNCTION NET "Run"
+    dnSPNG "CreateIsoscelesTriangle16"
+    dnLPNG "CreateIsoscelesTriangle32"
+    dnTIP  "RibbonToolTip"
+END_FUNCTION
