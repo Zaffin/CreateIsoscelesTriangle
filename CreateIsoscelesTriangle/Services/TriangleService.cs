@@ -20,6 +20,28 @@ namespace CreateIsoscelesTriangle.Services
             return isoscelesTriangle.Draw();
         }
 
+        public IsoscelesTriangleDetails GetTriangleDetails(double width, double height)
+        {
+            var sideLength = Math.Sqrt(Math.Pow(height, 2) + Math.Pow(width / 2, 2));
+            var halfWidth = width / 2;
+
+            var aera = halfWidth * height;
+            var perimeter = (sideLength * 2) + width;
+
+            var baseAngle = Math.Asin(height / sideLength) * (180 / Math.PI);
+            var vertexAngle = (Math.Asin(halfWidth / sideLength) * 2) * (180 / Math.PI);
+
+            var inscribedRadius = ((sideLength * width * 2) - Math.Pow(width, 2)) / (height * 4);
+            var circumscribedRadius = Math.Pow(sideLength, 2) / (height * 2);
+
+            return new IsoscelesTriangleDetails(aera,
+                                                perimeter,
+                                                baseAngle,
+                                                vertexAngle,
+                                                inscribedRadius,
+                                                circumscribedRadius);
+        }
+
         public Point3D SelectPoint(string prompt)
         {
             var myPoint = new Point3D();

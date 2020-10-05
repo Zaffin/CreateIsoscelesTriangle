@@ -70,6 +70,7 @@
     <Compile Include="Commands\DelegateCommand.cs" />
     <Compile Include="Converters\RadioButtonToEnumConverter.cs" />
     <Compile Include="DataTypes\IsoscelesTriangle.cs" />
+    <Compile Include="DataTypes\IsoscelesTriangleDetails.cs" />
     <Compile Include="DataTypes\TriangleBasePosition.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Services\TriangleService.cs" />
     <Compile Include="ValidationRules\PositiveNumberRule.cs" />
     <Compile Include="ViewModels\MainViewViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>

@@ -9,10 +9,10 @@
         xmlns:converters="clr-namespace:CreateIsoscelesTriangle.Converters"
         xmlns:resources="clr-namespace:CreateIsoscelesTriangle.Resources"
         mc:Ignorable="d"
-        Height="750"
+        Height="850"
         Width="400"
-        MinHeight="600"
-        MinWidth="400"
+        MinHeight="750"
+        MinWidth="350"
         WindowStyle="None">
 
     <Window.Resources>
@@ -32,7 +32,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="31"/>
             <RowDefinition Height="63"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -189,7 +188,7 @@
                              Grid.Column="1"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
-                             GroupName="TriangleOrigin"
+                             GroupName="TriangleBasePosition"
                              IsChecked="{Binding Path=BasePosition, 
                                                  Converter={StaticResource radioButtonToEnumConverter}, 
                                                  ConverterParameter=Top}"/>
@@ -197,7 +196,7 @@
                              Grid.Column="0"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Right"
-                             GroupName="TriangleOrigin"
+                             GroupName="TriangleBasePosition"
                              IsChecked="{Binding Path=BasePosition, 
                                                  Converter={StaticResource radioButtonToEnumConverter}, 
                                                  ConverterParameter=Left}"/>
@@ -205,7 +204,7 @@
                              Grid.Column="2"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Left"
-                             GroupName="TriangleOrigin"
+                             GroupName="TriangleBasePosition"
                              IsChecked="{Binding Path=BasePosition, 
                                                  Converter={StaticResource radioButtonToEnumConverter}, 
                                                  ConverterParameter=Right}"/>
@@ -220,8 +219,8 @@
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1.25*"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Row="0"
@@ -264,6 +263,107 @@
                     </TextBox.Text>
                 </TextBox>
 
+            </Grid>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="4"
+                    Orientation="Vertical"
+                    Background="Gainsboro"
+                    Margin="5,2.5">
+
+            <TextBlock Text="{x:Static resources:UIStrings.DetailsLabel}"
+                       Margin="10,5,10,5"/>
+
+            <Grid>
+            
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.25*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           Margin="10,0"
+                           Text="{x:Static resources:UIStrings.AeraLabel}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="0"
+                           Grid.Column="1"
+                           Margin="10,0"
+                           Text="{Binding TriangleDetails.Aera}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="1"
+                           Grid.Column="0"
+                           Margin="10,0"
+                           Text="{x:Static resources:UIStrings.PerimeterLabel}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="1"
+                           Grid.Column="1"
+                           Margin="10,0"
+                           Text="{Binding TriangleDetails.Perimeter}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="2"
+                           Grid.Column="0"
+                           Margin="10,0"
+                           Text="{x:Static resources:UIStrings.BaseLabel}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="2"
+                           Grid.Column="1"
+                           Margin="10,0"
+                           Text="{Binding TriangleDetails.BaseAngle}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="3"
+                           Grid.Column="0"
+                           Margin="10,0"
+                           Text="{x:Static resources:UIStrings.VertexLabel}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="3"
+                           Grid.Column="1"
+                           Margin="10,0"
+                           Text="{Binding TriangleDetails.VertexAngle}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="4"
+                           Grid.Column="0"
+                           Margin="10,0"
+                           Text="{x:Static resources:UIStrings.InscribedRadiusLabel}"
+                           VerticalAlignment="Center"/>
+
+
+                <TextBlock Grid.Row="4"
+                           Grid.Column="1"
+                           Margin="10,0"
+                           Text="{Binding TriangleDetails.InscribedRadius}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="5"
+                           Grid.Column="0"
+                           Margin="10,0"
+                           Text="{x:Static resources:UIStrings.CircumscribedRadiusLabel}"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="5"
+                           Grid.Column="1"
+                           Margin="10,0"
+                           Text="{Binding TriangleDetails.CircumscribedRadius}"
+                           VerticalAlignment="Center"/>
+                
             </Grid>
 
         </StackPanel>

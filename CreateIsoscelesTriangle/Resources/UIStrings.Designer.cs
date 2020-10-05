@@ -61,11 +61,38 @@ namespace CreateIsoscelesTriangle.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aera:.
+        /// </summary>
+        public static string AeraLabel {
+            get {
+                return ResourceManager.GetString("AeraLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Base Angle:.
+        /// </summary>
+        public static string BaseLabel {
+            get {
+                return ResourceManager.GetString("BaseLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Base position:.
         /// </summary>
         public static string BasePositionLabel {
             get {
                 return ResourceManager.GetString("BasePositionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Circumscribed Radius:.
+        /// </summary>
+        public static string CircumscribedRadiusLabel {
+            get {
+                return ResourceManager.GetString("CircumscribedRadiusLabel", resourceCulture);
             }
         }
         
@@ -90,11 +117,38 @@ namespace CreateIsoscelesTriangle.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string DetailsLabel {
+            get {
+                return ResourceManager.GetString("DetailsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Height:.
         /// </summary>
         public static string HeightLabel {
             get {
                 return ResourceManager.GetString("HeightLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inscribed Radius:.
+        /// </summary>
+        public static string InscribedRadiusLabel {
+            get {
+                return ResourceManager.GetString("InscribedRadiusLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perimeter:.
+        /// </summary>
+        public static string PerimeterLabel {
+            get {
+                return ResourceManager.GetString("PerimeterLabel", resourceCulture);
             }
         }
         
@@ -150,6 +204,15 @@ namespace CreateIsoscelesTriangle.Resources {
         public static string TitleLabel {
             get {
                 return ResourceManager.GetString("TitleLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vertex Angle:.
+        /// </summary>
+        public static string VertexLabel {
+            get {
+                return ResourceManager.GetString("VertexLabel", resourceCulture);
             }
         }
         

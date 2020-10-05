@@ -9,13 +9,15 @@ namespace CreateIsoscelesTriangle.DataTypes
 {
     public class IsoscelesTriangle
     {
-        Point3D Origin { get; set; }
+        public Point3D Origin { get; set; }
 
-        TriangleBasePosition BasePosition { get; set; }
+        public TriangleBasePosition BasePosition { get; set; }
 
-        double Width { get; set; }
+        public double Width { get; set; }
 
-        double Height { get; set; }
+        public double Height { get; set; }
+
+        public double SideLength { get; set; }
 
         public IsoscelesTriangle(Point3D origin,
                                  TriangleBasePosition basePosition,
@@ -26,6 +28,7 @@ namespace CreateIsoscelesTriangle.DataTypes
             BasePosition = basePosition;
             Width = width;
             Height = height;
+            SideLength = Math.Sqrt(Math.Pow(height, 2) + Math.Pow(width / 2, 2));
         }
 
         public bool Draw()

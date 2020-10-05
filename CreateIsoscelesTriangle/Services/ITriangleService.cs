@@ -17,6 +17,9 @@ namespace CreateIsoscelesTriangle.Services
                             double width,
                             double height);
 
+        IsoscelesTriangleDetails GetTriangleDetails(double width,
+                                                    double height);
+
         Point3D SelectPoint(string prompt);
     }
 }
